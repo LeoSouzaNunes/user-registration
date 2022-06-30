@@ -16,10 +16,10 @@ export function FormDataProvider({ children }) {
             city: "",
             account: "",
             iban: "",
+            paymentId: false,
         };
         localStorage.setItem("form", JSON.stringify(savedData));
     }
-
     const [formData, setFormData] = useState(savedData);
 
     function saveData(data) {

@@ -24,10 +24,6 @@ function App() {
                         element={<PaymentInformation />}
                     />
                     <Route
-                        path="registration/success"
-                        element={<h1>Success</h1>}
-                    />
-                    <Route
                         path="/*"
                         element={<Navigate to="/registration/personal-info" />}
                     />

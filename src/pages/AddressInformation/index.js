@@ -1,10 +1,18 @@
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import { Button, Container, Form, Header, Input } from "../../components";
 import useFormData from "../../hook/useFormData";
 
 export default function AddressInformation() {
     const { formData, saveData } = useFormData();
     const navigate = useNavigate();
+
+    if (formData.paymentId) {
+        return <Navigate to="/registration/payment-info" />;
+    }
+
+    if (shouldRedirect()) {
+        return <Navigate to="/registration/personal-info" />;
+    }
 
     const handleChange = (e) => {
         const key = e.target.id;
@@ -17,6 +25,16 @@ export default function AddressInformation() {
         e.preventDefault();
         navigate("/registration/payment-info");
     };
+
+    function shouldRedirect() {
+        const lastPageKeys = ["name", "last", "telephone"];
+        for (const key in formData) {
+            if (lastPageKeys.includes(key) && !formData[key].length) {
+                return true;
+            }
+        }
+        return false;
+    }
 
     return (
         <Container>

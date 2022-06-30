@@ -1,10 +1,14 @@
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import { Button, Container, Form, Header, Input } from "../../components";
 import useFormData from "../../hook/useFormData";
 
 export default function PersonalInformation() {
     const { formData, saveData } = useFormData();
     const navigate = useNavigate();
+
+    if (formData.paymentId) {
+        return <Navigate to="/registration/payment-info" />;
+    }
 
     const handleChange = (e) => {
         const key = e.target.id;
