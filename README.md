@@ -11,7 +11,7 @@ Make sure to follow the steps to run the back-end first, you can find them by cl
 
 2. Go to the folder
 ```
-	cd wunder-user-registration.git
+	cd wunder-user-registration
 ```
 
 3. Install the dependencies
