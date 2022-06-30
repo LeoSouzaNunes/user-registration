@@ -1,0 +1,36 @@
+@use "../../global/variables.scss" as vars;
+
+.input {
+    all: unset;
+    width: 100%;
+    padding: 15px 10px;
+
+    box-sizing: border-box;
+    font-size: 0.875rem;
+
+    background-color: vars.$soft-white;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: border-color 0.15s;
+    &:hover {
+        transition: border-color 0.15s;
+        border: 1px solid vars.$soft-gray;
+    }
+    &:focus {
+        transition: border-color 0.15s;
+        border: 1px solid vars.$black;
+    }
+    &::placeholder {
+        color: vars.$soft-gray;
+    }
+}
+
+.label {
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+
+    &:hover {
+        cursor: pointer;
+    }
+}

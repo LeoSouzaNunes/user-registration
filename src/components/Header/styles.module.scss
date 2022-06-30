@@ -1,0 +1,15 @@
+@use "../../global/variables.scss" as vars;
+
+.header {
+    width: 100%;
+    padding: 25px 20px;
+
+    background-color: vars.$dark-blue;
+
+    h1 {
+        color: vars.$base-color;
+        font-size: 1.25rem;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+    }
+}

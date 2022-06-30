@@ -1,3 +1,4 @@
+@use "./variables.scss" as vars;
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
 * {
@@ -10,8 +11,17 @@ body {
     font-family: Roboto, sans-serif;
 
     min-height: 100vh;
+    color: vars.$black;
 
     background-image: url("https://images.ctfassets.net/3v6ldchlts1l/7rjunq2lyFTBvaQZIQ4241/76a00c9b9bade1ab6d0288b6c314758a/hero-bg-2021_2x.jpg?fm=avif&w=2000");
     background-repeat: no-repeat;
     background-position: center 5%;
+}
+
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
 }

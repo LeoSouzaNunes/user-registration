@@ -1,0 +1,30 @@
+@use "../../global/variables.scss" as vars;
+
+.button {
+    all: unset;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 50px;
+    padding: 12px 15px;
+
+    color: vars.$base-color;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: auto;
+    margin-left: auto;
+
+    transition: 0.3s;
+    background-color: vars.$dark-blue;
+    border: 1px solid vars.$dark-blue;
+    border-radius: 5px;
+
+    &:hover {
+        transition: 0.3s;
+        cursor: pointer;
+        background-color: vars.$base-color;
+        color: vars.$dark-blue;
+    }
+}
