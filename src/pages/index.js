@@ -1,4 +1,5 @@
 import AddressInformation from "./AddressInformation";
+import PaymentInformation from "./PaymentInformation";
 import PersonalInformation from "./PersonalInformation";
 
-export { PersonalInformation, AddressInformation };
+export { PaymentInformation, PersonalInformation, AddressInformation };

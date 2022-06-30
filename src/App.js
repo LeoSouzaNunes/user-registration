@@ -1,6 +1,10 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { FormDataProvider } from "./context/FormDataContext";
-import { AddressInformation, PersonalInformation } from "./pages";
+import {
+    AddressInformation,
+    PersonalInformation,
+    PaymentInformation,
+} from "./pages";
 
 function App() {
     return (
@@ -17,7 +21,7 @@ function App() {
                     />
                     <Route
                         path="registration/payment-info"
-                        element={<h1>Payment</h1>}
+                        element={<PaymentInformation />}
                     />
                     <Route
                         path="registration/success"
