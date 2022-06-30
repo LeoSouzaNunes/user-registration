@@ -52,6 +52,7 @@ export default function PaymentInformation() {
             });
 
             saveData({ ...formData, paymentId });
+            await api.savePaymentId(paymentId);
         } catch (error) {
             console.log(error);
         } finally {

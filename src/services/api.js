@@ -9,6 +9,14 @@ async function postPayment(paymentData) {
     return response.data;
 }
 
-const api = { postPayment };
+async function savePaymentId(paymentId) {
+    const response = await axios.post("http://localhost:5000/registration", {
+        paymentId,
+    });
+
+    return response;
+}
+
+const api = { postPayment, savePaymentId };
 
 export default api;
